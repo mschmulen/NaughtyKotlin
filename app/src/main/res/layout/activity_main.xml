@@ -15,36 +15,42 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buttonCrashANRBubbleSort"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ANRBubbleSort"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="64dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="391dp">
 
-    <Button
-        android:id="@+id/buttonDivideByZero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Divide by Zero"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="133dp" />
+        <Button
+            android:id="@+id/button_nullPointerException"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NullPointerException" />
 
-    <Button
-        android:id="@+id/buttonRecursiveStackOverflow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="recursive Stack Overflow"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="202dp" />
+        <Button
+            android:id="@+id/buttonRuntimeException"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Runtime Exception" />
 
-    <Button
-        android:id="@+id/button_nullPointerException"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NullPointerException"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="276dp" />
+        <Button
+            android:id="@+id/buttonDivideByZero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Divide by Zero" />
+
+        <Button
+            android:id="@+id/buttonRecursiveStackOverflow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="recursive Stack Overflow" />
+
+        <Button
+            android:id="@+id/buttonCrashANRBubbleSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ANRBubbleSort" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

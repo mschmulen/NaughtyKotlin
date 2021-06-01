@@ -14,12 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        val btn_buttonCrashANRBubbleSort = findViewById(R.id.buttonCrashANRBubbleSort) as Button
-        btn_buttonCrashANRBubbleSort.setOnClickListener {
-            naughty.doANRBubleSort()
-            //Toast.makeText(this@MainActivity, "button A.", Toast.LENGTH_SHORT).show()
-        }
+        // naughty.indexOutOfRange()
 
         val btn_buttonDivideByZero = findViewById(R.id.buttonDivideByZero) as Button
         btn_buttonDivideByZero.setOnClickListener {
@@ -32,13 +27,22 @@ class MainActivity : AppCompatActivity() {
         }
 
         val btn_button_nullPointerException = findViewById(R.id.button_nullPointerException) as Button
-        btn_buttonRecursiveStackOverflow.setOnClickListener {
+        btn_button_nullPointerException.setOnClickListener {
             naughty.nullPointerException()
         }
 
-        // naughty.indexOutOfRange()
-        // naughty.runtimeException()
+        val btn_buttonRuntimeException = findViewById(R.id.buttonRuntimeException) as Button
+        btn_buttonRuntimeException.setOnClickListener {
+             naughty.runtimeException()
+        }
+
         // naughty.delayRuntimeException()
+
+        val btn_buttonCrashANRBubbleSort = findViewById(R.id.buttonCrashANRBubbleSort) as Button
+        btn_buttonCrashANRBubbleSort.setOnClickListener {
+            naughty.doANRBubleSort()
+            //Toast.makeText(this@MainActivity, "button A.", Toast.LENGTH_SHORT).show()
+        }
 
 
         dumpMemStuff()

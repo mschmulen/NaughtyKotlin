@@ -71,39 +71,11 @@ class NaughtyKotlin {
         println("XXXX done doANRBubleSort")
 
     }
-
+    
+    // TODO allocate a bunch of stuff ...
     fun outOfMemory() {
-        // OutOfMemoryError
-        // https://developer.android.com/reference/java/lang/OutOfMemoryError?authuser=1
-
-        // TODO allocate a bunch of stuff ...
 
     }
-
-//    val i: Int? = null
-    //val x = i.byteValue()
-
-//        val xyz: String? = null
-//        println(xyz)
-
-
-    // https://developer.android.com/topic/performance/memory
-//    fun doSomethingMemoryIntensive() {
-//        // Before doing something that requires a lot of memory,
-//        // check to see whether the device is in a low memory state.
-//        if (!getAvailableMemory().lowMemory) {
-//            // Do memory intensive work ...
-//            println("do memory intesive work")
-//        }
-//    }
-//
-//    private fun getAvailableMemory(): ActivityManager.MemoryInfo {
-//        val activityManager = getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
-//        return ActivityManager.MemoryInfo().also { memoryInfo ->
-//            activityManager.getMemoryInfo(memoryInfo)
-//        }
-//    }
-
 }
 
 class CrashError @JvmOverloads constructor(msg: String? = "simulated crash") :
@@ -116,7 +88,7 @@ class CrashError @JvmOverloads constructor(msg: String? = "simulated crash") :
 }
 
 
-
+// bubble sort stuff
 fun <T> ArrayList<T>.swapAt(first: Int, second: Int) {
     val aux = this[first]
     this[first] = this[second]
@@ -129,7 +101,6 @@ fun <T : Comparable<T>> ArrayList<T>.bubbleSort(showPasses: Boolean = false) {
         var swapped = false
         for (current in 0 until end) {
             if (this[current] > this[current + 1]) {
-                // 4
                 this.swapAt(current, current + 1)
                 swapped = true
             }
